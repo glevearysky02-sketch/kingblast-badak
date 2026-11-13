@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080f20">
+  <title>BadakPrem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BACKGROUND VIDEO -->
+  <video class="background-video" autoplay muted loop playsinline>
+    <source src="https://ganga--link--ghhzdp9sv8hk.code.run/i/2wdlr8tq2c.mp4" type="video/mp4">
+  </video>
+
+  <header class="topbar">
+    <a class="logo" href="#" onclick="showPage('home'); return false;">
+      Badak<span>Prem</span>
+    </a>
+    <div class="status"><span></span> ONLINE</div>
+  </header>
+
+  <main class="container">
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <div class="hero-content">
+          <span class="eyebrow">WELCOME BACK</span>
+          <h1>Welcome to<br>our website!<span>.</span></h1>
+          <p>Selamat datang di BadakPrem.</p>
+        </div>
+        <div class="hero-decoration">B</div>
+      </div>
+
+      <div class="section-heading">
+        <h3>Disclaimer</h3>
+        <span>INFORMATION</span>
+      </div>
+
+      <div class="glass-card disclaimer-card">
+        <div class="card-icon blue-icon">ⓘ</div>
+        <div>
+          <h4>Harap dibaca</h4>
+          <p>
+            BadakPrem merupakan website pribadi untuk mempertahankan nomor whatsapp biasa atau business. fitur premium dan 100% akurat. Jika website ini 100% tidak akurat itu masalah server yang sangat lambat, dikarenakan lambat jadi jangan salahkan developer kami, kami usahakan agar server menyala terus menerus. 
+          </p>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <h3>Menu utama</h3>
+        <span>EXPLORE</span>
+      </div>
+
+      <div class="menu-grid">
+        <button class="menu-card" onclick="showPage('badakwa')">
+          <span class="menu-icon">◈</span>
+          <strong>BadakWa</strong>
+          <small>WhatsApp tools</small>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="menu-card" onclick="showPage('owner')">
+          <span class="menu-icon">◎</span>
+          <strong>Owner</strong>
+          <small>Social media</small>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="menu-card" onclick="showPage('history')">
+          <span class="menu-icon">◷</span>
+          <strong>Riwayat</strong>
+          <small>Recent activity</small>
+          <span class="card-arrow">↗</span>
+        </button>
+      </div>
+
+      <div class="section-heading">
+        <h3>Berita & update</h3>
+        <span>LATEST</span>
+      </div>
+
+      <div class="news-list">
+        <article class="news-card">
+          <div class="news-top">
+            <span class="news-tag">UPDATE</span>
+            <span class="news-date">12 NOV 2026</span>
+          </div>
+          <h4>Selamat datang di BadakPrem</h4>
+          <p>Website yang bisa menahan 1000 pesan atau lebih, cocok untuk blast. </p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-top">
+            <span class="news-tag purple-tag">INFORMATION</span>
+            <span class="news-date">12 NOV 2026</span>
+          </div>
+          <h4>Fitur BadakWa tersedia</h4>
+          <p>Gunakan lima pilihan menu WhatsApp yang tersedia di halaman BadakWa.</p>
+        </article>
+      </div>
+
+      <div class="section-heading">
+        <h3>Rating website</h3>
+        <span>YOUR FEEDBACK</span>
+      </div>
+
+      <div class="glass-card rating-card">
+        <h4>Bagaimana pengalamanmu?</h4>
+        <p>Beri penilaian untuk BadakPrem.</p>
+
+        <div class="stars" id="stars">
+          <button onclick="rateSite(1)" aria-label="1 bintang">★</button>
+          <button onclick="rateSite(2)" aria-label="2 bintang">★</button>
+          <button onclick="rateSite(3)" aria-label="3 bintang">★</button>
+          <button onclick="rateSite(4)" aria-label="4 bintang">★</button>
+          <button onclick="rateSite(5)" aria-label="5 bintang">★</button>
+        </div>
+
+        <p class="rating-result" id="ratingResult">Belum ada rating darimu.</p>
+      </div>
+    </section>
+
+    <!-- BADAKWA -->
+    <section id="badakwa" class="page">
+      <div class="page-heading">
+        <span class="eyebrow">WHATSAPP FEATURE</span>
+        <h2>BadakWa</h2>
+        <p>Masukkan nomor dan pilih salah satu menu.</p>
+      </div>
+
+      <div class="glass-card form-card">
+        <label for="phone">Nomor WhatsApp</label>
+        <input id="phone" type="tel" placeholder="628xxxxxxxxxx">
+
+        <label for="waMenu">Pilih menu</label>
+        <select id="waMenu">
+          <option value="chat">01 — Vermet</option>
+          <option value="call">02 — Badak (biasa/business)</option>
+          <option value="copy">03 — Centang Biru</option>
+          <option value="share">04 — Anti kenon</option>
+          <option value="web">05 — Anti Limit</option>
+        </select>
+
+        <button class="primary-btn" onclick="processWA()">
+          Jalankan Menu <span>→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- OWNER -->
+    <section id="owner" class="page">
+      <div class="page-heading">
+        <span class="eyebrow">PROFILE</span>
+        <h2>Owner</h2>
+        <p>Informasi pemilik BadakPrem.</p>
+      </div>
+
+      <div class="glass-card owner-card">
+        <img class="avatar"
+          src="https://ganga--link--ghhzdp9sv8hk.code.run/i/z7ff8wq856.jpg"
+          alt="Foto Owner">
+
+        <h2>Zyron Official Owner</h2>
+        <p class="description">Zyron Official Owner.</p>
+
+        <div class="social-list">
+          <a class="social-link" href="https://tiktok.com/@d1m4s025" target="_blank" rel="noopener">
+            <span><b class="social-dot">♪</b> TikTok</span><span>↗</span>
+          </a>
+
+          <a class="social-link" href="https://whatsapp.com/channel/0029VbBmRhuEquiQOAjLHF0D" target="_blank" rel="noopener">
+            <span><b class="social-dot">◉</b> Saluran WhatsApp</span><span>↗</span>
+          </a>
+
+          <a class="social-link" href="https://t.me/VynoxZz" target="_blank" rel="noopener">
+            <span><b class="social-dot">➤</b> Telegram</span><span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIWAYAT -->
+    <section id="history" class="page">
+      <div class="page-heading">
+        <span class="eyebrow">ACTIVITY</span>
+        <h2>Riwayat</h2>
+        <p>Daftar aktivitas sebelumnya.</p>
+      </div>
+
+      <div class="glass-card">
+        <div id="historyList">
+          <p class="empty">Belum ada aktivitas.</p>
+        </div>
+
+        <button class="clear-btn" onclick="clearHistory()">
+          Hapus Riwayat
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BOTTOM NAVIGATION -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-page="home" onclick="showPage('home')">
+      <span>⌂</span><small>Home</small>
+    </button>
+
+    <button class="nav-item" data-page="badakwa" onclick="showPage('badakwa')">
+      <span>◈</span><small>BadakWa</small>
+    </button>
+
+    <button class="nav-item" data-page="owner" onclick="showPage('owner')">
+      <span>◎</span><small>Owner</small>
+    </button>
+
+    <button class="nav-item" data-page="history" onclick="showPage('history')">
+      <span>◷</span><small>Riwayat</small>
+    </button>
+  </nav>
+
+  <!-- DISCLAIMER POPUP -->
+  <div class="overlay" id="disclaimer">
+    <div class="modal">
+      <div class="modal-icon">ⓘ</div>
+      <span class="eyebrow">PLEASE READ</span>
+      <h2>Disclaimer</h2>
+      <p>
+        Selamat datang di BadakPrem. Website ini merupakan
+        halaman pribadi. Gunakan semua fitur dengan bijak
+        dan bertanggung jawab.
+      </p>
+      <button class="primary-btn" onclick="acceptDisclaimer()">
+        Saya Mengerti <span>→</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- LOADING ANIMATION -->
+  <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
+    <div class="loading-box" role="status" aria-live="polite">
+      <div class="loading-spinner" id="loadingSpinner"></div>
+      <div class="loading-check" id="loadingCheck">✓</div>
+      <h3 id="loadingTitle">Sedang memproses</h3>
+      <p id="loadingMessage">Mohon tunggu sebentar...</p>
+      <div class="loading-track">
+        <div class="loading-progress" id="loadingProgress"></div>
+      </div>
+      <span class="loading-percent" id="loadingPercent">0%</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
